@@ -1,10 +1,10 @@
 use async_std::task;
 use env_logger;
-use hello_rust::node_p2p;
-use hello_rust::node_rpc::{PokemonRpcImpl, Rpc};
 use jsonrpc_http_server::jsonrpc_core::IoHandler;
 use jsonrpc_http_server::ServerBuilder;
 use rand::prelude::*;
+use rust_example::node_p2p;
+use rust_example::node_rpc::{PokemonRpcImpl, Rpc};
 use std::net::{IpAddr, Ipv4Addr, SocketAddr};
 use std::{error::Error, thread};
 use tokio::sync::mpsc;
