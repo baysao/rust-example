@@ -1,15 +1,39 @@
 [package]
-name = "test_rust"
+name = "hello-rust"
 version = "0.1.0"
 edition = "2018"
-
+default-run = "rust-example"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+#[[bin]]
+#name = "client"
+#path = "src/client.rs"
 
 [dependencies]
+# async-stream = "0.3"
+# crossbeam-channel = "0.5.1"
+env_logger = "0.8.4"
+futures = { version = "0.3", default-features = false, features = ["alloc"] }
+
 jsonrpc = "0.12.0"
-libp2p = "0.39.1"
-serde = "1.0.126"
-futures = "0.3.15"
+jsonrpc-core = "17.1.0"
+jsonrpc-core-client = "17.1.0"
+jsonrpc-derive = "17.1.0"
+jsonrpc-http-server = "17.1.0"
+libp2p = "0.38.0"
+log = "0.4"
+prost = "0.7.0"
+rand = "0.8.4"
+
+serde = "1.0"
+serde_json = "1.0"
+serde_derive = "1.0"
+# tokio = { version = "1.8.0", features = ["rt-multi-thread ", "time", "fs", "macros", "net"] }
+tonic = "0.4.3"
+# [dev-dependencies]
 async-std = { version = "1.9.0", features = ["attributes"] }
-env_logger = "0.9.0"
-jsonrpc-http-server = "18.0.0"
+tokio = "1.8.0"
+#{ version = "1.8.0", features = ["io-util", "io-std", "macros", "rt-multi-thread", "net", "rt", "time", "fs", "rt-multi-thread"] }
+
+# [build-dependencies]
+# protoc-rust-grpc = "0.8.2"
+# tonic-build = "0.4.2"
